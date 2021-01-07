@@ -10,8 +10,7 @@ pipeline {
     stage('test') {
       steps {
         sh '''python3 --version 
-python3 
-print ("my name is mohamed balboula")'''
+echo "name is mohamed balboula"'''
       }
     }
 
