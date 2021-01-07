@@ -29,5 +29,11 @@ pipeline {
       }
     }
 
+    stage('test if app is ready for prod') {
+      steps {
+        input 'do you want to deploy this to production?'
+      }
+    }
+
   }
 }
