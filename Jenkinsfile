@@ -19,5 +19,15 @@ pipeline {
       }
     }
 
+    stage('test-envcar') {
+      agent any
+      environment {
+        message_printed = '"this job was powerfully over"'
+      }
+      steps {
+        echo 'this pipeline is bringing us ${message_printed}'
+      }
+    }
+
   }
 }
