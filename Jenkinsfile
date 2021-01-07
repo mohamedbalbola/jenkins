@@ -25,7 +25,7 @@ pipeline {
         message_printed = '"this job was powerfully over"'
       }
       steps {
-        echo 'this pipeline is bringing us ${message_printed}'
+        echo "this pipeline is bringing us ${message_printed}"
       }
     }
 
