@@ -9,7 +9,8 @@ pipeline {
 
     stage('test') {
       steps {
-        sh 'python3 --version'
+        sh '''python3 --version 
+echo "name is mohamed balboula"'''
       }
     }
 
@@ -30,6 +31,9 @@ pipeline {
     }
 
     stage('test if app is ready for prod') {
+      when {
+        branch 'main'
+      }
       steps {
         input 'do you want to deploy this to production?'
       }
