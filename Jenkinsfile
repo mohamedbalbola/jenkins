@@ -31,6 +31,9 @@ echo "name is mohamed balboula"'''
     }
 
     stage('test if app is ready for prod') {
+      when {
+        branch 'master'
+      }
       steps {
         input 'do you want to deploy this to production?'
       }
